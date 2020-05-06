@@ -3,9 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_weight="match_parent">
-
+    android:layout_height="200dp">
     <RelativeLayout
         android:id="@+id/container"
         android:layout_width="0dp"
@@ -16,7 +14,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
         <Button
             android:id="@+id/btn_payment_status"
             android:layout_width="match_parent"
@@ -24,7 +21,9 @@
             android:layout_below="@id/fbrebfre"
             android:layout_marginTop="8dp"
             android:lineSpacingExtra="8dp"
-            android:textColor="@color/content_text_color" />
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:fontFamily="@font/font" />
 
         <TextView
             android:id="@+id/tv_description"
@@ -35,13 +34,15 @@
             android:layout_alignLeft="@id/tv_title"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
-            android:text="20 March 2019, 10:00 AM "
-            android:lineSpacingExtra="8dp"
-            android:textColor="@color/content_text_color" />
+            android:text="Booking ID: JF092319"
+            android:textColor="#4f4f4f"
+            android:textSize="14sp"
+            android:fontFamily="@font/font"
+            android:lineSpacingExtra="8dp" />
 
         <TextView
             android:id="@+id/gengj"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_description"
             android:layout_alignStart="@+id/tv_description"
@@ -49,12 +50,14 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="16dp"
             android:lineSpacingExtra="8dp"
-            android:text="20 March 2019, 10:00 AM "
-            android:textColor="@color/content_text_color" />
+            android:text="Silver Jubilee Tower"
+            android:textColor="#989898"
+            android:textSize="16sp"
+            android:fontFamily="@font/font" />
 
         <TextView
             android:id="@+id/fbrebfre"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/gengj"
             android:layout_alignStart="@+id/tv_description"
@@ -62,8 +65,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="16dp"
             android:lineSpacingExtra="8dp"
-            android:text="20 March 2019, 10:00 AM "
-            android:textColor="@color/content_text_color" />
+            android:text="St. Mary's Basilica, Bengaluru"
+            android:textColor="#989898"
+            android:textSize="16sp"
+            android:fontFamily="@font/font" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -75,8 +80,10 @@
             android:layout_marginStart="12dp"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="20dp"
-            android:text="20 March 2019, 10:00 AM "
-            android:textColor="@color/title_text_color"
+            android:fontFamily="@font/font"
+            android:text="20 Mar 2019, 10:00 AM"
+            android:textColor="#4f4f4f"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -89,11 +96,11 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="Rs. 2199.43"
-            android:textColor="@color/content_text_color" />
-
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:fontFamily="@font/font" />
 
     </RelativeLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

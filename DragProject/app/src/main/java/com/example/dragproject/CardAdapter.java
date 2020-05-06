@@ -1,7 +1,6 @@
 package com.example.dragproject;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewAdapter> {
-    TripModel mdata;
-    Context mContext;
+    private TripModel mdata;
+    private Context mContext;
     public CardAdapter(Context mContext) {
         this.mContext = mContext;
         mdata = new TripModel();
@@ -27,15 +26,12 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewAdapte
     @Override
     public void onBindViewHolder(@NonNull CardAdapter.CardViewAdapter cardViewHolder, int position) {
         cardViewHolder.btn.setText(mdata.getCards().get(position).getData());
-        if(position==0){
-            cardViewHolder.btn.setBackground(Drawable.createFromPath("#507dff"));
-        }
-        else if(position==1){
-            cardViewHolder.btn.setBackground(Drawable.createFromPath("#edaf02"));
-        }
-        else{
-            cardViewHolder.btn.setBackground(Drawable.createFromPath("#ff4c4c"));
-        }
+        if(position==0)
+            cardViewHolder.btn.setBackgroundColor( Color.parseColor("#507dff"));
+        else if(position==1)
+            cardViewHolder.btn.setBackgroundColor( Color.parseColor("#edaf02"));
+        else
+            cardViewHolder.btn.setBackgroundColor(cardViewHolder.btn.getResources().getColor(  R.color.third));
     }
     @Override
     public int getItemCount() {
